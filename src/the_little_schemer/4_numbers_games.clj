@@ -83,7 +83,7 @@
 (defn rempick
   [n lat]
   (cond
-    (one? n) (rest lat)
+    (zero? (dec n)) (rest lat)
     :else (cons (first lat)
                 (rempick (dec n) (rest lat)))))
 
@@ -113,3 +113,10 @@
 (defn one?
   [n]
   (o= n 1))
+
+(defn rempick2
+  [n lat]
+  (cond
+    (one? n) (rest lat)
+    :else (cons (first lat)
+                (rempick (dec n) (rest lat)))))

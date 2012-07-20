@@ -214,3 +214,10 @@
       0
       2
       100)))
+
+
+(deftest test-rempick2
+  (testing "ラットの n 番目の要素を取り除いた、別のラットを返す"
+    (are [n lat expected]
+      (= (rempick2 n lat) expected)
+      3 '(hotdogs with hot mustard) '(hotdogs with mustard))))
