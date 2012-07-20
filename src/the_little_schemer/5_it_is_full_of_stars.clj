@@ -85,7 +85,7 @@
     :else (and (equal? (first l1) (first l2))
                (eqlist? (rest l1) (rest l2)))))
 
-; Clojure では = を使えばよい
+;; Clojure では = を使えばよい
 (defn equal?
   [s1 s2]
   (cond

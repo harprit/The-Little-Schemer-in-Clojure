@@ -105,6 +105,7 @@
                                 (all-nums (rest lat)))
     :else (all-nums (rest lat))))
 
+;; Clojure では = があるので不要だが……
 (defn eqan?
   [a1 a2]
   (cond
