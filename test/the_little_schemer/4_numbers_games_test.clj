@@ -48,7 +48,7 @@
 
 (deftest test-tup+
   (testing "両方のタップが空の場合、空のリストを返す"
-    (is (empty? (tup+ '() '()))))
+    (is (= (tup+ '() '()) '())))
 
   (testing "タップの要素数が同じ場合、双方のタップの同じ位置にある数を足し合わせた、別のタップを返す"
     (are [tup1 tup2 expected]
@@ -175,7 +175,7 @@
 
 (deftest test-no-nums
   (testing "ラットが空の場合、空のリストを返す"
-    (is (empty? (no-nums '()))))
+    (is (= (no-nums '()) '())))
 
   (testing "ラットが空ではない場合、ラットから数を取り除いた、別のラットを返す"
     (are [lat expected]
@@ -185,7 +185,7 @@
 
 (deftest test-all-nums
   (testing "ラットが空の場合、空のリストを返す"
-    (is (empty? (all-nums '()))))
+    (is (= (all-nums '()) '())))
 
   (testing "ラットが空ではない場合、ラットから数以外を取り除いた、タップを返す"
     (are [lat expected]
