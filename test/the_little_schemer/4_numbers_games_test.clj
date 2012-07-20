@@ -204,6 +204,21 @@
       'hoge '(foo bar piyo) 0)))
 
 
+(deftest test-eqan?
+  (testing "a1, a2 が同じアトムの場合、true を返す"
+    (are [a1 a2]
+      (eqan? a1 a2)
+      1 1
+      'x 'x))
+
+  (testing "a1, a2 が違うアトムの場合、false を返す"
+    (are [a1 a2]
+      (not (eqan? a1 a2))
+      1 2
+      'x 'y
+      1 'x)))
+
+
 (deftest test-one?
   (testing "与えられた数が 1 の場合、true を返す"
     (is (one? 1)))

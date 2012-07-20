@@ -103,6 +103,13 @@
                                 (all-nums (rest lat)))
     :else (all-nums (rest lat))))
 
+(defn eqan?
+  [a1 a2]
+  (cond
+    (and (number? a1) (number? a2)) (o= a1 a2)
+    (or (number? a1) (number? a2)) false
+    :else (= a1 a2)))
+
 (defn occur
   [a lat]
   (cond
