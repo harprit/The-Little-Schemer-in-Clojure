@@ -3,8 +3,8 @@
         the-little-schemer.2-do-it-and-again))
 
 (deftest test-lat?
-  (testing "リストが空の場合は false を返す"
-    (is  (lat? '())))
+  (testing "リストが空の場合は true を返す"
+    (is (lat? '())))
 
   (testing "リストの要素が全てアトムの場合は true を返す"
     (is (lat? '(Jack Sprat could eat no chicken fat))))
