@@ -58,11 +58,11 @@
     (lt? n m) false
     :else true))
 
-(defn exp
+(defn pow
   [n m]
   (cond
     (zero? m) 1
-    :else (mul n (exp n (dec m)))))
+    :else (mul n (pow n (dec m)))))
 
 (defn quo
   [n m]

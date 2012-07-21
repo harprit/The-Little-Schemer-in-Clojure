@@ -122,13 +122,13 @@
       3 3)))
 
 
-(deftest test-exp
+(deftest test-pow
   (testing "べき乗数が 0 の場合は、1 を返す"
-    (is (= (exp 5 0) 1)))
+    (is (= (pow 5 0) 1)))
 
   (testing "べき乗数が 1以上の場合は、被べき乗数をべき乗数でべき乗した数を返す"
     (are [n m expected]
-      (= (exp n m) expected)
+      (= (pow n m) expected)
       1 1 1
       2 3 8)))
 
