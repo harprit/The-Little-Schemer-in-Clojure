@@ -21,7 +21,7 @@
 
 (deftest test-makeset
   (testing "ラットが空の場合、空のリストを返す"
-    (is (makeset '()) '()))
+    (is (= (makeset '()) '())))
 
   (testing "ラット内のアトムに重複がない場合、与えられたラットと同じラットを返す"
     (are [lat]
