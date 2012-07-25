@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.3-cons-the-magnificent))
 
-(deftest test-rember
+(deftest rember-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (rember :x '()) '())))
 
@@ -16,7 +16,7 @@
     (is (= (rember 'toast '(bacon lettuce and tomato)) '(bacon lettuce and tomato)))))
 
 
-(deftest test-firsts
+(deftest firsts-test
   (testing "リストが空の場合、空のリストを返す"
     (is (= (firsts '()) '())))
 
@@ -36,7 +36,7 @@
         ((no) more)) '((five plums) eleven (no)))))
 
 
-(deftest test-insertR
+(deftest insertR-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (insertR :x :y '()) '())))
 
@@ -48,7 +48,7 @@
       'e 'd '(a b c d f g d h) '(a b c d e f g d h))))
 
 
-(deftest test-insertL
+(deftest insertL-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (insertL :x :y '()) '())))
 
@@ -60,7 +60,7 @@
       'e 'f '(a b c d f g f h) '(a b c d e f g f h))))
 
 
-(deftest test-subst
+(deftest subst-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (subst :x :y '()) '())))
 
@@ -71,7 +71,7 @@
       :b :d '(:a :d :c :d :e) '(:a :b :c :d :e))))
 
 
-(deftest test-subst2
+(deftest subst2-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (subst2 :x :y :z '()) '())))
 
@@ -82,7 +82,7 @@
       'vanilla 'chocolate 'banana '(chocolate ice cream with banana topping) '(vanilla ice cream with banana topping))))
 
 
-(deftest test-multirember
+(deftest multirember-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (multirember :x '()) '())))
 
@@ -95,7 +95,7 @@
     (is (= (multirember 'toast '(bacon lettuce and tomato)) '(bacon lettuce and tomato)))))
 
 
-(deftest test-multiinsertR
+(deftest multiinsertR-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (multiinsertR :x :y '()) '())))
 
@@ -106,7 +106,7 @@
       'fish 'fried '(chips and fried or fried and fish) '(chips and fried fish or fried fish and fish))))
 
 
-(deftest test-multiinsertL
+(deftest multiinsertL-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (multiinsertL :x :y '()) '())))
 
@@ -117,7 +117,7 @@
       'fried 'fish '(chips and fish or fish and fried) '(chips and fried fish or fried fish and fried))))
 
 
-(deftest test-multisubst
+(deftest multisubst-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (multisubst :x :y '()) '())))
 

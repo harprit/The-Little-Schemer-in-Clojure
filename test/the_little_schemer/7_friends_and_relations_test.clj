@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.7-friends-and-relations))
 
-(deftest test-myset?
+(deftest myset?-test
   (testing "ラットが空の場合、 true を返す"
     (is (myset? '())))
 
@@ -19,7 +19,7 @@
       '(apple 3 pear 4 9 apple 3 4))))
 
 
-(deftest test-makeset
+(deftest makeset-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (makeset '()) '())))
 
@@ -36,7 +36,7 @@
       '(apple 3 pear 4 9 apple 3 4) '(apple 3 pear 4 9))))
 
 
-(deftest test-subset?
+(deftest subset?-test
   (testing "最初のセットが空の場合、true を返す"
     (are [set2]
       (subset? '() set2)
@@ -54,7 +54,7 @@
       '(4 pounds of horseradish) '(four pounds chicken and5 ounces horseradish))))
 
 
-(deftest test-eqset?
+(deftest eqset?-test
   (testing "両方のセットが空の場合、true を返す"
     (is (eqset? '() '())))
 
@@ -69,7 +69,7 @@
       '(6 large chickens with wings) '(6 chickens with very large wings))))
 
 
-(deftest test-intersect?
+(deftest intersect?-test
   (testing "最初のセットが空の場合、false を返す"
     (are [set2]
       (not (intersect? '() set2))
@@ -86,7 +86,7 @@
       (not (intersect? set1 set2))
       '(stewed tomatoes) '(macaroni and cheese))))
 
-(deftest test-intersect
+(deftest intersect-test
   (testing "最初のセットが空の場合、空のリストを返す"
     (are [set2]
       (= (intersect '() set2))
@@ -104,7 +104,7 @@
       '(stewed tomatoes) '(macaroni and cheese))))
 
 
-(deftest test-union
+(deftest union-test
   (testing "両方のセットが空の場合、空のリストを返す"
     (is (= (union '() '()) '())))
 
@@ -119,7 +119,7 @@
       '(stewed tomatoes casserole macaroni and cheese))))
 
 
-(deftest test-intersectall
+(deftest intersectall-test
   (testing "リスト内にセットが一つしか存在しない場合、そのセットを返す"
     (is (= (intersectall '((x y z))) '(x y z))))
 
@@ -136,7 +136,7 @@
       '((a b c) (d e f) (g)))))
 
 
-(deftest test-a-pair?
+(deftest a-pair?-test
   (testing "x がアトムの場合、false を返す"
     (are [x]
       (not (a-pair? x))
@@ -159,7 +159,7 @@
       '(full (house)))))
 
 
-(deftest test-fun?
+(deftest fun?-test
   (testing "(firsts rel) がセットではない場合、false を返す"
     (are [rel]
       (not (fun? rel))
@@ -172,7 +172,7 @@
       '((8 3) (4 2) (7 6) (6 2) (3 4)))))
 
 
-(deftest test-revrel
+(deftest revrel-test
   (testing "rel が空の場合、空のリストを返す"
     (is (= (revrel '()) '())))
 
@@ -182,7 +182,7 @@
       '((8 a) (pumpkin pie) (got chicken)) '((a 8) (pie pumpkin) (chicken got)))))
 
 
-(deftest test-fullfun?
+(deftest fullfun?-test
   (testing "fun が全単射ではない場合、false を返す"
     (are [fun]
       (not (fullfun? fun))
@@ -196,7 +196,7 @@
       '((grape raisin) (plum prune) (stewed grape)))))
 
 
-(deftest test-one-to-one?
+(deftest one-to-one?-test
   (testing "fun が全単射ではない場合、false を返す"
     (are [fun]
       (not (one-to-one? fun))

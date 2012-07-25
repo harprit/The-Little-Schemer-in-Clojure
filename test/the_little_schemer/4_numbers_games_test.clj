@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.4-numbers-games))
 
-(deftest test-o+
+(deftest o+-test
   (testing "加算数が 0 の場合は、被加算数を返す"
     (is (= (o+ 5 0) 5)))
 
@@ -13,7 +13,7 @@
       46 12 58)))
 
 
-(deftest test-o-
+(deftest o--test
   (testing "減算数が 0 の場合は、被減算数を返す"
     (is (= (o- 5 0) 5)))
 
@@ -24,7 +24,7 @@
       14 3 11)))
 
 
-(deftest test-addtup
+(deftest addtup-test
   (testing "タップが空の場合は、0 を返す"
     (is (zero? (addtup '()))))
 
@@ -35,7 +35,7 @@
       '(15 6 7 12 3) 43)))
 
 
-(deftest test-mul
+(deftest mul-test
   (testing "乗算数が 0 の場合は、0 を返す"
     (is (= (mul 5 0) 0)))
 
@@ -46,7 +46,7 @@
       5 3 15)))
 
 
-(deftest test-tup+
+(deftest tup+-test
   (testing "両方のタップが空の場合、空のリストを返す"
     (is (= (tup+ '() '()) '())))
 
@@ -62,7 +62,7 @@
       '(1 4) '(2 5 8) '(3 9 8)
       '(4 2 6) '(8 3) '(12 5 6))))
 
-(deftest test-gt?
+(deftest gt?-test
   (testing "n が m よりも大きい場合、true を返す"
     (are [n m]
       (gt? n m)
@@ -82,7 +82,7 @@
       3 3)))
 
 
-(deftest test-lt?
+(deftest lt?-test
   (testing "n が m よりも小さい場合、true を返す"
     (are [n m]
       (lt? n m)
@@ -102,7 +102,7 @@
       3 3)))
 
 
-(deftest test-o=
+(deftest o=-test
   (testing "n が m よりも小さい場合、false を返す"
     (are [n m]
       (not (o= n m))
@@ -122,7 +122,7 @@
       3 3)))
 
 
-(deftest test-pow
+(deftest pow-test
   (testing "べき乗数が 0 の場合は、1 を返す"
     (is (= (pow 5 0) 1)))
 
@@ -133,7 +133,7 @@
       2 3 8)))
 
 
-(deftest test-quo
+(deftest quo-test
   (testing "除算数が被除算数よりも小さい場合は、0 を返す"
     (are [n m]
       (zero? (quo n m))
@@ -148,7 +148,7 @@
       15 4 3)))
 
 
-(deftest test-length
+(deftest length-test
   (testing "ラットが空の場合、0 を返す"
     (is (zero? (length '()))))
 
@@ -159,21 +159,21 @@
       '(ham and cheese on rye) 5)))
 
 
-(deftest test-pick
+(deftest pick-test
   (testing "ラットの n 番目の要素を返す"
     (are [n lat expected]
       (= (pick n lat) expected)
       4 '(lasagna spaghetti ravioli macaroni meatball) 'macaroni)))
 
 
-(deftest test-rempick
+(deftest rempick-test
   (testing "ラットの n 番目の要素を取り除いた、別のラットを返す"
     (are [n lat expected]
       (= (rempick n lat) expected)
       3 '(hotdogs with hot mustard) '(hotdogs with mustard))))
 
 
-(deftest test-no-nums
+(deftest no-nums-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (no-nums '()) '())))
 
@@ -183,7 +183,7 @@
       '(5 pears 6 prunes 9 dates) '(pears prunes dates))))
 
 
-(deftest test-all-nums
+(deftest all-nums-test
   (testing "ラットが空の場合、空のリストを返す"
     (is (= (all-nums '()) '())))
 
@@ -193,7 +193,7 @@
       '(5 pears 6 prunes 9 dates) '(5 6 9))))
 
 
-(deftest test-occur
+(deftest occur-test
   (testing "ラットが空の場合、0 を返す"
     (is (zero? (occur 'x '()))))
 
@@ -204,7 +204,7 @@
       'hoge '(foo bar piyo) 0)))
 
 
-(deftest test-eqan?
+(deftest eqan?-test
   (testing "a1, a2 が同じアトムの場合、true を返す"
     (are [a1 a2]
       (eqan? a1 a2)
@@ -219,7 +219,7 @@
       1 'x)))
 
 
-(deftest test-one?
+(deftest one?-test
   (testing "与えられた数が 1 の場合、true を返す"
     (is (one? 1)))
 

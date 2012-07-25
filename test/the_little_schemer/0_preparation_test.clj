@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.0-preparation))
 
-(deftest test-atom?
+(deftest atom?-test
   (testing "指定した値が空リストの場合は false を返す"
     (is (not (atom? '()))))
 

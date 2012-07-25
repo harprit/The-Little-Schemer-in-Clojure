@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.6-shadows))
 
-(deftest test-numbered?
+(deftest numbered?-test
   (testing "算術式の表現に +, *, ** を除いて、数だけを含んでいる場合、true を返す"
     (are [aexp]
       (numbered? aexp)
@@ -17,7 +17,7 @@
       '(3 + (4 * x)))))
 
 
-(deftest test-value
+(deftest value-test
   (testing "算術式の値を返す"
     (are [nexp expected]
       (= (value nexp) expected)
@@ -26,7 +26,7 @@
       '(1 + (3 ** 4)) 82)))
 
 
-(deftest test-value2
+(deftest value2-test
   (testing "算術式の値を返す"
     (are [nexp expected]
       (= (value2 nexp) expected)
@@ -35,7 +35,7 @@
       '(+ 1 (** 3 4)) 82)))
 
 
-(deftest test-sero?
+(deftest sero?-test
   (testing "リストを使った数の表現が 0 ならば、true を返す"
     (is (sero? '() ; 0
                )))
@@ -45,7 +45,7 @@
                     )))))
 
 
-(deftest test-edd1
+(deftest edd1-test
   (testing "リストを使った数の表現に 1 を加算する"
     (are [n expected]
       (= (edd1 n) expected)
@@ -54,7 +54,7 @@
       )))
 
 
-(deftest test-zub1
+(deftest zub1-test
   (testing "リストを使った数の表現から 1 を減算する"
     (are [n expected]
       (= (zub1 n) expected)
@@ -63,7 +63,7 @@
       )))
 
 
-(deftest test-edd
+(deftest edd-test
   (testing "リストを使った数の表現 n に m を加算する"
     (are [n m expected]
       (= (edd n m) expected)
@@ -72,7 +72,7 @@
       )))
 
 
-(deftest test-zub
+(deftest zub-test
   (testing "リストを使った数の表現 n から m を減算する"
     (are [n m expected]
       (= (zub n m) expected)

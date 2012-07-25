@@ -2,7 +2,7 @@
   (:use clojure.test
         the-little-schemer.2-do-it-and-again))
 
-(deftest test-lat?
+(deftest lat?-test
   (testing "リストが空の場合は true を返す"
     (is (lat? '())))
 
@@ -16,7 +16,7 @@
       '(Jack (Sprat could) eat no chicken fat))))
 
 
-(deftest test-member?
+(deftest member?-test
   (testing "ラットが空の場合は false を返す"
     (is (not (member? :x '()))))
 
