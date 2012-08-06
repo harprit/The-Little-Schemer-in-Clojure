@@ -1,6 +1,6 @@
-(ns the-little-schemer.2-do-it-and-again-test
+(ns the-little-schemer.chapter-02-test
   (:use clojure.test
-        the-little-schemer.2-do-it-and-again))
+        the-little-schemer.chapter-02))
 
 (deftest lat?-test
   (testing "リストが空の場合は true を返す"

@@ -1,5 +1,5 @@
-(ns the-little-schemer.3-cons-the-magnificent
-  (:use the-little-schemer.0-preparation))
+(ns the-little-schemer.chapter-03
+  (:use the-little-schemer.preparation))
 
 (defn rember
   [a lat]

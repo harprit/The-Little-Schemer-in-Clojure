@@ -1,6 +1,6 @@
-(ns the-little-schemer.7-friends-and-relations-test
+(ns the-little-schemer.chapter-07-test
   (:use clojure.test
-        the-little-schemer.7-friends-and-relations))
+        the-little-schemer.chapter-07))
 
 (deftest myset?-test
   (testing "ラットが空の場合、 true を返す"

@@ -1,6 +1,6 @@
-(ns the-little-schemer.5-it-is-full-of-stars
-  (:use the-little-schemer.0-preparation
-        [the-little-schemer.4-numbers-games :only (eqan?)]))
+(ns the-little-schemer.chapter-05
+  (:use the-little-schemer.preparation
+        [the-little-schemer.chapter-04 :only (eqan?)]))
 
 (declare eqlist? equal?)
 

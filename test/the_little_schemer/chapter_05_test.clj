@@ -1,6 +1,6 @@
-(ns the-little-schemer.5-it-is-full-of-stars-test
+(ns the-little-schemer.chapter-05-test
   (:use clojure.test
-        the-little-schemer.5-it-is-full-of-stars))
+        the-little-schemer.chapter-05))
 
 (deftest rember*-test
   (testing "リストが空の場合、空のリストを返す"

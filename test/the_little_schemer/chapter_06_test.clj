@@ -1,6 +1,6 @@
-(ns the-little-schemer.6-shadows-test
+(ns the-little-schemer.chapter-06-test
   (:use clojure.test
-        the-little-schemer.6-shadows))
+        the-little-schemer.chapter-06))
 
 (deftest numbered?-test
   (testing "算術式の表現に +, *, ** を除いて、数だけを含んでいる場合、true を返す"

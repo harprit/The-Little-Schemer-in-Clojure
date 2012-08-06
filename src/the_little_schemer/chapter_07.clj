@@ -1,7 +1,7 @@
-(ns the-little-schemer.7-friends-and-relations
-  (:use the-little-schemer.0-preparation
-        [the-little-schemer.2-do-it-and-again :only (member?)]
-        [the-little-schemer.3-cons-the-magnificent :only (multirember firsts)]))
+(ns the-little-schemer.chapter-07
+  (:use the-little-schemer.preparation
+        [the-little-schemer.chapter-02 :only (member?)]
+        [the-little-schemer.chapter-03 :only (multirember firsts)]))
 
 (defn myset?
   [lat]

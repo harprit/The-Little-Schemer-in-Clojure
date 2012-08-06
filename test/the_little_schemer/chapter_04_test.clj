@@ -1,6 +1,6 @@
-(ns the-little-schemer.4-numbers-games-test
+(ns the-little-schemer.chapter-04-test
   (:use clojure.test
-        the-little-schemer.4-numbers-games))
+        the-little-schemer.chapter-04))
 
 (deftest o+-test
   (testing "加算数が 0 の場合は、被加算数を返す"

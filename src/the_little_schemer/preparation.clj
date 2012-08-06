@@ -1,4 +1,4 @@
-(ns the-little-schemer.0-preparation)
+(ns the-little-schemer.preparation)
 
 (defn atom?
   [x]

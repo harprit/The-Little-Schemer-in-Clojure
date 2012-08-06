@@ -1,6 +1,6 @@
-(ns the-little-schemer.3-cons-the-magnificent
+(ns the-little-schemer.chapter-03-test
   (:use clojure.test
-        the-little-schemer.3-cons-the-magnificent))
+        the-little-schemer.chapter-03))
 
 (deftest rember-test
   (testing "ラットが空の場合、空のリストを返す"

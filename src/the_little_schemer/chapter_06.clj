@@ -1,6 +1,6 @@
-(ns the-little-schemer.6-shadows
-  (:use the-little-schemer.0-preparation
-        [the-little-schemer.4-numbers-games :only (o+ mul pow)]))
+(ns the-little-schemer.chapter-06
+  (:use the-little-schemer.preparation
+        [the-little-schemer.chapter-04 :only (o+ mul pow)]))
 
 (defn numbered?
   [aexp]

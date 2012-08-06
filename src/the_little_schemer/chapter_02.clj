@@ -1,5 +1,5 @@
-(ns the-little-schemer.2-do-it-and-again
-  (:use the-little-schemer.0-preparation))
+(ns the-little-schemer.chapter-02
+  (:use the-little-schemer.preparation))
 
 (defn lat?
   [ls]

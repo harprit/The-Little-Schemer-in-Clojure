@@ -1,5 +1,5 @@
-(ns the-little-schemer.4-numbers-games
-  (:use the-little-schemer.0-preparation))
+(ns the-little-schemer.chapter-04
+  (:use the-little-schemer.preparation))
 
 (declare rempick one?)
 

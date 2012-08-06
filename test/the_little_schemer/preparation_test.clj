@@ -1,6 +1,6 @@
-(ns the-little-schemer.0-preparation-test
+(ns the-little-schemer.preparation-test
   (:use clojure.test
-        the-little-schemer.0-preparation))
+        the-little-schemer.preparation))
 
 (deftest atom?-test
   (testing "指定した値が空リストの場合は false を返す"
